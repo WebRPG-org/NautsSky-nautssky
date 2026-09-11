@@ -1,30 +1,237 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="user-scalable=no">
-        <link rel="icon" href="icon/icon.png" type="image/png">
-        <link rel="apple-touch-icon" href="icon/icon.png">
-        <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
-        <title>Di Balik Hujan</title>
-    <script defer src="https://insight.ravelloh.com/script.js?siteId=5ace6623-f51b-4571-8f60-e0473ea3317b"></script>
-    </head>
-    <body style="background-color: black">
-        <script type="text/javascript" src="js/libs/pixi.js"></script>
-        <script type="text/javascript" src="js/libs/pixi-tilemap.js"></script>
-        <script type="text/javascript" src="js/libs/pixi-picture.js"></script>
-        <script type="text/javascript" src="js/libs/fpsmeter.js"></script>
-        <script type="text/javascript" src="js/libs/lz-string.js"></script>
-        <script type="text/javascript" src="js/libs/iphone-inline-video.browser.js"></script>
-        <script type="text/javascript" src="js/rpg_core.js"></script>
-        <script type="text/javascript" src="js/rpg_managers.js"></script>
-        <script type="text/javascript" src="js/rpg_objects.js"></script>
-        <script type="text/javascript" src="js/rpg_scenes.js"></script>
-        <script type="text/javascript" src="js/rpg_sprites.js"></script>
-        <script type="text/javascript" src="js/rpg_windows.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-    </body>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./public/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./public/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <title>NautsSky - Home</title>
+    <meta name="description" content="NautsSky - home" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Spectral:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+  <script defer src="https://insight.ravelloh.com/script.js?siteId=5ace6623-f51b-4571-8f60-e0473ea3317b"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <img src="./public/nautssky/nautssky1.png" alt="NautsSky Logo" class="logo-icon">
+            <span class="logo-text font-playfair">NautsSky</span>
+          </a>
+
+          <!-- Desktop menu -->
+          <div class="desktop-menu">
+            <a href="index.html" class="menu-item active">Home</a>
+            <a href="./public/www/index.html" class="menu-item">
+              <span class="cookie-link">
+                Game
+              </span>
+            <a href="cookienauts.html" class="menu-item">
+              <span class="cookie-link">
+                CookieNauts
+                <img src="./public/cookies/cookies1.webp" alt="cookies" class="cookie-icon">
+              </span>
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+            <i data-feather="menu" class="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <div class="mobile-menu-items">
+          <a href="index.html" class="mobile-menu-item">Home</a>
+            <a href="./public/www/index.html" class="menu-item">
+              <span class="cookie-link">
+                Game
+              </span>
+          <a href="cookienauts.html" class="mobile-menu-item">
+            <span>CookieNauts</span>
+            <img src="./public/cookies/cookies1.webp" alt="cookies" class="cookie-icon-mobile"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="icon-container">
+            <img src="./public/nautssky/nautssky1.png" alt="NautsSky Logo" class="logo-image">
+          </div>
+          <h1 class="hero-title font-playfair">NautsSky</h1>
+          <p class="hero-subtitle">Selamat datang di website kami! Kami, Kelompok 5 dari SMK Angkasa Lanud Husein, menghadirkan kreativitas dan inovasi dalam satu platform. Dengan semangat belajar, kami membuktikan bahwa ide bisa jadi sesuatu yang berarti.</p>
+          <a href="#team" class="hero-cta">
+            Lihat Anggota Kelompok Kami
+            <i data-feather="arrow-right-circle" class="cta-icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title font-playfair">Anggota Kelompok 5</h2>
+          <p class="section-subtitle">Kenali tim kreatif di balik website ini, kolaborasi siswa kelas X SMK Angkasa Lanud Husein.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Team Member 1 -->
+          <div class="team-card">
+            <div class="team-image">
+              <div class="image-container" style="background-image: url('./public/Anggota/gip.jpg')"></div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name font-playfair">Al Gyfrans Geraldy Wibowo</h3>
+              <div class="team-position">
+                <i data-feather="briefcase" class="position-icon"></i>
+                Anggota
+              </div>
+              <p class="team-bio">nothing</p>
+              <div class="team-contact">
+                <i data-feather="mail" class="contact-icon"></i>
+                <a href="mailto:gyfrans.co@gmail.com">gyfrans.co@gmail.com</a>
+              </div>
+            </div>
+            <div class="card-action">
+              <i data-feather="arrow-right" class="action-icon"></i>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="team-card">
+            <div class="team-image">
+              <div class="image-container" style="background-image: url('./public/Anggota/aldonna.jpg')"></div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name font-playfair">Aldonna Safira Juliana Kawilarang</h3>
+              <div class="team-position">
+                <i data-feather="briefcase" class="position-icon"></i>
+                Anggota
+              </div>
+              <p class="team-bio">nothing</p>
+              <div class="team-contact">
+                <i data-feather="mail" class="contact-icon"></i>
+                <a href="mailto:gmail.com">gmail.com</a>
+              </div>
+            </div>
+            <div class="card-action">
+              <i data-feather="arrow-right" class="action-icon"></i>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="team-card">
+            <div class="team-image">
+              <div class="image-container" style="background-image: url('')"></div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name font-playfair">Tristan Aditya</h3>
+              <div class="team-position">
+                <i data-feather="briefcase" class="position-icon"></i>
+                CTO
+              </div>
+              <p class="team-bio">nothing</p>
+              <div class="team-contact">
+                <i data-feather="mail" class="contact-icon"></i>
+                <a href="mailto:gmail.com">gmail.com</a>
+              </div>
+            </div>
+            <div class="card-action">
+              <i data-feather="arrow-right" class="action-icon"></i>
+            </div>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="team-card">
+            <div class="team-image">
+              <div class="image-container" style="background-image: url('')"></div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name font-playfair">M. Aziz farhan Nur Rohim</h3>
+              <div class="team-position">
+                <i data-feather="briefcase" class="position-icon"></i>
+                CMO
+              </div>
+              <p class="team-bio">nothing</p>
+              <div class="team-contact">
+                <i data-feather="mail" class="contact-icon"></i>
+                <a href="mailto:gmail.com">gmail.com</a>
+              </div>
+            </div>
+            <div class="card-action">
+              <i data-feather="arrow-right" class="action-icon"></i>
+            </div>
+          </div>
+
+          <!-- Team Member 5 -->
+          <div class="team-card">
+            <div class="team-image">
+              <div class="image-container" style="background-image: url('')"></div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name font-playfair">Ziko Ghaelifa Ramadhan</h3>
+              <div class="team-position">
+                <i data-feather="briefcase" class="position-icon"></i>
+                CFO
+              </div>
+              <p class="team-bio">nothing</p>
+              <div class="team-contact">
+                <i data-feather="mail" class="contact-icon"></i>
+                <a href="mailto:gmail.com">gmail.com</a>
+              </div>
+            </div>
+            <div class="card-action">
+              <i data-feather="arrow-right" class="action-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CookieNauts Promo Section -->
+    <section class="cookienauts-promo">
+      <div class="container">
+        <div class="promo-content">
+          <div class="promo-icon">
+            <img src="./public/cookies/cookies3.webp" alt="cookies" class="cookie-promo-icon">
+          </div>
+          <h2 class="promo-title font-spectral">CookieNauts</h2>
+          <p class="promo-text">NautsSky, a small business serving artisanal cookies with unforgettable flavors.</p>
+          <a href="cookienauts.html" class="promo-cta">
+            Visit CookieNauts
+            <i data-feather="arrow-right-circle" class="cta-icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="copyright">&copy; 2025 NautsSky. Seluruh hak cipta dilindungi.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
